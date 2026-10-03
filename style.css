@@ -1,0 +1,892 @@
+/* ========================================
+   БАЗОВЫЕ НАСТРОЙКИ
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #ffca00;
+    --primary-hover: #ff9a00;
+
+    --text: #17191c;
+    --text-secondary: #73777d;
+
+    --background: #ffffff;
+    --background-gray: #f5f6f7;
+
+    --border: #e3e5e8;
+
+    --radius: 12px;
+    --container: 1200px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+
+    color: var(--text);
+    background: var(--background);
+
+    line-height: 1.5;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+select {
+    font: inherit;
+}
+
+
+/* ========================================
+   КОНТЕЙНЕР
+======================================== */
+
+.container {
+    width: min(
+        calc(100% - 40px),
+        var(--container)
+    );
+
+    margin: 0 auto;
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+.header {
+    height: 72px;
+
+    background: #fff;
+
+    border-bottom: 1px solid var(--border);
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header__inner {
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* Логотип */
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: var(--primary);
+}
+
+
+/* Навигация */
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+
+    margin-left: 50px;
+    margin-right: auto;
+}
+
+.nav__link {
+    color: #555b62;
+    font-size: 15px;
+    font-weight: 500;
+
+    transition: 0.2s;
+}
+
+.nav__link:hover,
+.nav__link.active {
+    color: var(--text);
+}
+
+
+/* Действия */
+
+.header__actions {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.header__login {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+
+/* ========================================
+   КНОПКИ
+======================================== */
+
+.btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 11px 20px;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.2s;
+}
+
+.btn--primary {
+    color: #fff;
+    background: var(--primary);
+}
+
+.btn--primary:hover {
+    background: var(--primary-hover);
+}
+
+
+/* ========================================
+   HERO
+======================================== */
+
+.hero {
+    background:
+        linear-gradient(
+            180deg,
+            #f4f5f7 0%,
+            #ffffff 100%
+        );
+
+    padding: 70px 0 90px;
+}
+
+.hero__content {
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: clamp(40px, 5vw, 62px);
+
+    line-height: 1.05;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 20px;
+}
+
+.hero p {
+    color: var(--text-secondary);
+
+    font-size: 18px;
+
+    max-width: 600px;
+
+    margin: 0 auto;
+}
+
+
+/* ========================================
+   ПОИСК
+======================================== */
+
+.search-box {
+    max-width: 1000px;
+
+    margin: 45px auto 0;
+
+    background: #fff;
+
+    border: 1px solid var(--border);
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 15px 45px rgba(0, 0, 0, 0.08);
+
+    padding: 8px;
+}
+
+
+/* Табы */
+
+.search-tabs {
+    display: flex;
+
+    border-bottom: 1px solid var(--border);
+
+    padding: 0 10px;
+}
+
+.search-tab {
+    border: none;
+    background: none;
+
+    padding: 15px 20px;
+
+    cursor: pointer;
+
+    color: var(--text-secondary);
+
+    font-size: 14px;
+    font-weight: 600;
+
+    border-bottom: 2px solid transparent;
+}
+
+.search-tab.active {
+    color: var(--text);
+    border-color: var(--primary);
+}
+
+
+/* Форма */
+
+.search-form {
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr
+        1fr
+        auto;
+
+    gap: 10px;
+
+    padding: 20px 10px 10px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.field label {
+    font-size: 12px;
+
+    color: var(--text-secondary);
+}
+
+.field select {
+    width: 100%;
+
+    height: 45px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+
+    background: #fff;
+
+    padding: 0 12px;
+
+    outline: none;
+
+    cursor: pointer;
+}
+
+.field select:focus {
+    border-color: #b7bbc0;
+}
+
+
+/* Кнопка поиска */
+
+.search-button {
+    height: 45px;
+
+    align-self: end;
+
+    border: none;
+
+    border-radius: 8px;
+
+    padding: 0 24px;
+
+    background: var(--primary);
+
+    color: white;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.search-button:hover {
+    background: var(--primary-hover);
+}
+
+
+/* Подвал поиска */
+
+.search-footer {
+    padding: 8px 10px 12px;
+}
+
+.search-footer a {
+    color: var(--primary);
+
+    font-size: 13px;
+
+    font-weight: 500;
+}
+
+
+/* ========================================
+   SECTIONS
+======================================== */
+
+.section {
+    padding: 75px 0;
+}
+
+.section--gray {
+    background: var(--background-gray);
+}
+
+.section__header {
+    display: flex;
+
+    align-items: flex-end;
+    justify-content: space-between;
+
+    margin-bottom: 32px;
+}
+
+.section__header h2 {
+    font-size: 30px;
+
+    line-height: 1.2;
+
+    letter-spacing: -0.7px;
+}
+
+.section__header p {
+    margin-top: 8px;
+
+    color: var(--text-secondary);
+
+    font-size: 15px;
+}
+
+.section__link {
+    color: var(--primary);
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+.section__header--center {
+    display: block;
+
+    text-align: center;
+}
+
+
+/* ========================================
+   КАТЕГОРИИ
+======================================== */
+
+.categories {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 16px;
+}
+
+.category-card {
+    padding: 28px 24px;
+
+    background: #fff;
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    transition: 0.2s;
+}
+
+.category-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.07);
+}
+
+.category-card__icon {
+    font-size: 40px;
+
+    margin-bottom: 20px;
+}
+
+.category-card h3 {
+    font-size: 17px;
+
+    margin-bottom: 5px;
+}
+
+.category-card span {
+    color: var(--text-secondary);
+
+    font-size: 13px;
+}
+
+
+/* ========================================
+   КАРТОЧКИ АВТОМОБИЛЕЙ
+======================================== */
+
+.cars-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+.car-card {
+    overflow: hidden;
+
+    background: #fff;
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    transition: 0.2s;
+}
+
+.car-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Изображение */
+
+.car-card__image {
+    height: 190px;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e9ebee,
+            #d9dce0
+        );
+}
+
+.car-placeholder {
+    font-size: 25px;
+
+    font-weight: 800;
+
+    color: #8b9096;
+}
+
+
+/* Бейдж */
+
+.car-card__badge {
+    position: absolute;
+
+    top: 12px;
+    left: 12px;
+
+    background: var(--primary);
+
+    color: white;
+
+    border-radius: 6px;
+
+    padding: 5px 8px;
+
+    font-size: 11px;
+
+    font-weight: 600;
+}
+
+
+/* Избранное */
+
+.favorite {
+    position: absolute;
+
+    top: 10px;
+    right: 10px;
+
+    width: 34px;
+    height: 34px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.95);
+
+    cursor: pointer;
+
+    font-size: 21px;
+
+    line-height: 1;
+}
+
+
+/* Контент */
+
+.car-card__content {
+    padding: 18px;
+}
+
+.car-card__price {
+    font-size: 21px;
+
+    font-weight: 750;
+
+    margin-bottom: 7px;
+}
+
+.car-card h3 {
+    font-size: 16px;
+
+    margin-bottom: 9px;
+}
+
+.car-card__details,
+.car-card__location {
+    color: var(--text-secondary);
+
+    font-size: 13px;
+}
+
+.car-card__location {
+    margin-top: 5px;
+}
+
+
+/* ========================================
+   ПРЕИМУЩЕСТВА
+======================================== */
+
+.advantages {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+
+    max-width: 950px;
+
+    margin: 0 auto;
+}
+
+.advantage {
+    text-align: center;
+
+    padding: 25px;
+}
+
+.advantage__icon {
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 20px;
+
+    border-radius: 14px;
+
+    background: #f0f1f3;
+
+    font-size: 27px;
+}
+
+.advantage h3 {
+    margin-bottom: 10px;
+
+    font-size: 17px;
+}
+
+.advantage p {
+    color: var(--text-secondary);
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+.footer {
+    background: #17191c;
+
+    color: white;
+
+    padding: 55px 0 25px;
+}
+
+.logo--footer {
+    color: white;
+
+    display: inline-block;
+
+    margin-bottom: 12px;
+}
+
+.footer p {
+    color: #9da1a7;
+
+    font-size: 14px;
+}
+
+.footer__top {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 80px;
+
+    padding-bottom: 50px;
+}
+
+.footer__links {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 180px);
+
+    gap: 40px;
+}
+
+.footer__links div {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.footer__links h4 {
+    font-size: 14px;
+
+    margin-bottom: 5px;
+}
+
+.footer__links a {
+    color: #9da1a7;
+
+    font-size: 13px;
+
+    transition: 0.2s;
+}
+
+.footer__links a:hover {
+    color: white;
+}
+
+.footer__bottom {
+    border-top: 1px solid #303338;
+
+    padding-top: 20px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color: #777c82;
+
+    font-size: 12px;
+}
+
+.footer__bottom div {
+    display: flex;
+
+    gap: 20px;
+}
+
+
+/* ========================================
+   АДАПТИВ
+======================================== */
+
+@media (max-width: 1000px) {
+
+    .nav {
+        display: none;
+    }
+
+    .categories,
+    .cars-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .search-form {
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+    .search-button {
+        width: 100%;
+    }
+
+    .advantages {
+        grid-template-columns:
+            1fr;
+    }
+
+    .footer__top {
+        flex-direction: column;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .container {
+        width: min(
+            calc(100% - 24px),
+            var(--container)
+        );
+    }
+
+    .header {
+        height: 62px;
+    }
+
+    .header__login {
+        display: none;
+    }
+
+    .header__actions {
+        gap: 10px;
+    }
+
+    .header__actions .btn {
+        padding: 9px 13px;
+    }
+
+    .hero {
+        padding: 45px 0 55px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+
+        letter-spacing: -1.5px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .search-form {
+        grid-template-columns: 1fr;
+    }
+
+    .search-tabs {
+        overflow-x: auto;
+    }
+
+    .search-tab {
+        white-space: nowrap;
+    }
+
+    .section {
+        padding: 55px 0;
+    }
+
+    .section__header {
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+    .section__header h2 {
+        font-size: 25px;
+    }
+
+    .section__link {
+        white-space: nowrap;
+    }
+
+    .categories,
+    .cars-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .car-card__image {
+        height: 220px;
+    }
+
+    .footer__links {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+
+    .footer__bottom {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .footer__bottom div {
+        flex-direction: column;
+
+        gap: 7px;
+    }
+
+}

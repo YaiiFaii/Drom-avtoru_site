@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>апдрайв — купить и продать автомобиль</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="container header__inner">
+
+            <a href="#" class="logo">
+                <span>ап</span>драйв
+            </a>
+
+            <nav class="nav">
+                <a href="#" class="nav__link active">Автомобили</a>
+                <a href="#" class="nav__link">Запчасти</a>
+                <a href="#" class="nav__link">Отзывы</a>
+                <a href="#" class="nav__link">Новости</a>
+            </nav>
+
+            <div class="header__actions">
+                <a href="#" class="header__login">Войти</a>
+                <a href="#" class="btn btn--primary">Продать авто</a>
+            </div>
+
+        </div>
+    </header>
+
+
+    <!-- Главный блок -->
+    <main>
+
+        <section class="hero">
+            <div class="container">
+
+                <div class="hero__content">
+                    <h1>Найди автомобиль<br>своей мечты</h1>
+
+                    <p>
+                        Более 100 000 автомобилей от частных продавцов
+                        и автосалонов
+                    </p>
+                </div>
+
+
+                <!-- Форма поиска -->
+                <div class="search-box">
+
+                    <div class="search-tabs">
+                        <button class="search-tab active">
+                            Купить автомобиль
+                        </button>
+
+                        <button class="search-tab">
+                            Новые автомобили
+                        </button>
+                    </div>
+
+
+                    <div class="search-form">
+
+                        <div class="field">
+                            <label>Марка</label>
+
+                            <select>
+                                <option>Любая марка</option>
+                                <option>Toyota</option>
+                                <option>BMW</option>
+                                <option>Mercedes-Benz</option>
+                                <option>Volkswagen</option>
+                                <option>Lada</option>
+                            </select>
+                        </div>
+
+
+                        <div class="field">
+                            <label>Модель</label>
+
+                            <select>
+                                <option>Любая модель</option>
+                                <option>Camry</option>
+                                <option>Corolla</option>
+                                <option>5 Series</option>
+                                <option>C-Class</option>
+                            </select>
+                        </div>
+
+
+                        <div class="field">
+                            <label>Цена</label>
+
+                            <select>
+                                <option>Любая цена</option>
+                                <option>До 1 000 000 ₽</option>
+                                <option>До 2 000 000 ₽</option>
+                                <option>До 3 000 000 ₽</option>
+                                <option>От 3 000 000 ₽</option>
+                            </select>
+                        </div>
+
+
+                        <button class="search-button">
+                            Найти автомобили
+                        </button>
+
+                    </div>
+
+
+                    <div class="search-footer">
+                        <a href="#">Расширенный поиск</a>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- Категории -->
+        <section class="section">
+            <div class="container">
+
+                <div class="section__header">
+                    <div>
+                        <h2>Категории автомобилей</h2>
+                        <p>Выберите подходящий тип автомобиля</p>
+                    </div>
+
+                    <a href="#" class="section__link">
+                        Все категории →
+                    </a>
+                </div>
+
+
+                <div class="categories">
+
+                    <a href="#" class="category-card">
+                        <div class="category-card__icon">🚘</div>
+                        <h3>Легковые</h3>
+                        <span>84 520 объявлений</span>
+                    </a>
+
+                    <a href="#" class="category-card">
+                        <div class="category-card__icon">🚙</div>
+                        <h3>Кроссоверы</h3>
+                        <span>31 240 объявлений</span>
+                    </a>
+
+                    <a href="#" class="category-card">
+                        <div class="category-card__icon">🚐</div>
+                        <h3>Минивэны</h3>
+                        <span>8 430 объявлений</span>
+                    </a>
+
+                    <a href="#" class="category-card">
+                        <div class="category-card__icon">🚚</div>
+                        <h3>Коммерческие</h3>
+                        <span>12 840 объявлений</span>
+                    </a>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- Популярные автомобили -->
+        <section class="section section--gray">
+
+            <div class="container">
+
+                <div class="section__header">
+                    <div>
+                        <h2>Популярные автомобили</h2>
+                        <p>Интересные предложения прямо сейчас</p>
+                    </div>
+
+                    <a href="#" class="section__link">
+                        Смотреть все →
+                    </a>
+                </div>
+
+
+                <div class="cars-grid">
+
+                    <!-- Автомобиль 1 -->
+                    <article class="car-card">
+
+                        <div class="car-card__image">
+                            <div class="car-card__badge">
+                                Отличная цена
+                            </div>
+
+                            <button class="favorite">♡</button>
+
+                            <div class="car-placeholder">
+                                BMW
+                            </div>
+                        </div>
+
+                        <div class="car-card__content">
+
+                            <div class="car-card__price">
+                                3 250 000 ₽
+                            </div>
+
+                            <h3>BMW 5 серия, 2021</h3>
+
+                            <p class="car-card__details">
+                                2.0 л · бензин · автомат · 249 л.с.
+                            </p>
+
+                            <p class="car-card__location">
+                                Москва · 68 000 км
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Автомобиль 2 -->
+                    <article class="car-card">
+
+                        <div class="car-card__image">
+
+                            <button class="favorite">♡</button>
+
+                            <div class="car-placeholder">
+                                Toyota
+                            </div>
+
+                        </div>
+
+                        <div class="car-card__content">
+
+                            <div class="car-card__price">
+                                2 480 000 ₽
+                            </div>
+
+                            <h3>Toyota Camry, 2020</h3>
+
+                            <p class="car-card__details">
+                                2.5 л · бензин · автомат · 181 л.с.
+                            </p>
+
+                            <p class="car-card__location">
+                                Санкт-Петербург · 92 000 км
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Автомобиль 3 -->
+                    <article class="car-card">
+
+                        <div class="car-card__image">
+                            <div class="car-card__badge">
+                                Новое
+                            </div>
+
+                            <button class="favorite">♡</button>
+
+                            <div class="car-placeholder">
+                                Mercedes
+                            </div>
+                        </div>
+
+                        <div class="car-card__content">
+
+                            <div class="car-card__price">
+                                4 890 000 ₽
+                            </div>
+
+                            <h3>Mercedes-Benz C-Class, 2023</h3>
+
+                            <p class="car-card__details">
+                                1.5 л · бензин · автомат · 170 л.с.
+                            </p>
+
+                            <p class="car-card__location">
+                                Москва · 24 000 км
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- Автомобиль 4 -->
+                    <article class="car-card">
+
+                        <div class="car-card__image">
+
+                            <button class="favorite">♡</button>
+
+                            <div class="car-placeholder">
+                                LADA
+                            </div>
+
+                        </div>
+
+                        <div class="car-card__content">
+
+                            <div class="car-card__price">
+                                1 190 000 ₽
+                            </div>
+
+                            <h3>LADA Vesta, 2022</h3>
+
+                            <p class="car-card__details">
+                                1.6 л · бензин · механика · 106 л.с.
+                            </p>
+
+                            <p class="car-card__location">
+                                Казань · 41 000 км
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Преимущества -->
+        <section class="section">
+
+            <div class="container">
+
+                <div class="section__header section__header--center">
+                    <h2>Почему апдрайв?</h2>
+                    <p>Всё необходимое для покупки автомобиля</p>
+                </div>
+
+
+                <div class="advantages">
+
+                    <div class="advantage">
+                        <div class="advantage__icon">🔎</div>
+
+                        <h3>Большой выбор</h3>
+
+                        <p>
+                            Тысячи новых объявлений каждый день
+                            от частных продавцов и дилеров.
+                        </p>
+                    </div>
+
+
+                    <div class="advantage">
+                        <div class="advantage__icon">🛡️</div>
+
+                        <h3>Проверенные автомобили</h3>
+
+                        <p>
+                            История автомобиля и подробная информация
+                            перед покупкой.
+                        </p>
+                    </div>
+
+
+                    <div class="advantage">
+                        <div class="advantage__icon">⚡</div>
+
+                        <h3>Быстрый поиск</h3>
+
+                        <p>
+                            Удобные фильтры помогут найти нужный автомобиль
+                            за несколько минут.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Подвал -->
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="footer__top">
+
+                <div>
+                    <a href="#" class="logo logo--footer">
+                        <span>ап</span>драйв
+                    </a>
+
+                    <p>
+                        Автомобильный маркетплейс
+                    </p>
+                </div>
+
+
+                <div class="footer__links">
+
+                    <div>
+                        <h4>Покупателям</h4>
+                        <a href="#">Поиск автомобилей</a>
+                        <a href="#">Каталоги</a>
+                        <a href="#">Отзывы</a>
+                    </div>
+
+                    <div>
+                        <h4>Продавцам</h4>
+                        <a href="#">Разместить объявление</a>
+                        <a href="#">Продажа автомобиля</a>
+                        <a href="#">Помощь</a>
+                    </div>
+
+                    <div>
+                        <h4>О сервисе</h4>
+                        <a href="#">О компании</a>
+                        <a href="#">Контакты</a>
+                        <a href="#">Партнёрам</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer__bottom">
+                <span>© 2026 апдрайв</span>
+
+                <div>
+                    <a href="#">Политика конфиденциальности</a>
+                    <a href="#">Пользовательское соглашение</a>
+                </div>
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>
